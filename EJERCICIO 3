@@ -1,0 +1,10 @@
+class Mi_exponente:
+    def __init__(self, k, o):
+        self.num1 = k
+        self.num2 = o
+    def aumentar(self):
+        self.aumentar= pow(self.num1, self.num2)
+        print (self.aumentar)
+
+exponente = Mi_exponente(5,8)
+exponente.aumentar()

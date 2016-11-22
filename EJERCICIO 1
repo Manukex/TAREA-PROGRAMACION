@@ -1,0 +1,19 @@
+import math
+class romano():
+    def __init__(self,num):
+        self.num = (num)
+        self.num_rom = ""
+    def romanizar(self):
+        Unidad=["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"]
+        Decena=["", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"]
+        Centena=["", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"]
+        Mil=["", "M", "MM"]
+        Uni= self.num % 10
+        Dec=int(math.floor(self.num/10))%10
+        Cen=int(math.floor(self.num/100))%10
+        Mil1=int(math.floor(self.num/1000))
+        if(self.num >= 1 and self.num <= 2000): 
+            print(Mil[Mil1]+Centena[Cen]+Decena[Dec]+Unidad[Uni])
+
+ejecutar = romano(29)
+ejecutar.romanizar()

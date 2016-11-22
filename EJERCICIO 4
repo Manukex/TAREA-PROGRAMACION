@@ -1,0 +1,19 @@
+class Voltear:
+    def __init__(self, cadena):
+        self.frase = cadena
+        self.otrafrase = ""    
+    def invertir_elementos(self):
+        palabra = ""
+        for m in range(len(self.frase),0,-1):
+            if self.frase[m-1] != " " or m==0:
+                palabra = self.frase[m-1] + palabra
+            else:
+                self.otrafrase = self.otrafrase + palabra + " "
+                palabra = ""
+        self.otrafrase = self.otrafrase + palabra   
+    def ejecutar(self):
+        print (self.otrafrase)
+        
+revierte_lafrase = Voltear("Mi Diario Python")
+revierte_lafrase.invertir_elementos()
+revierte_lafrase.ejecutar()
